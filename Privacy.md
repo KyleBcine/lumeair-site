@@ -26,14 +26,14 @@ The app keeps only what it needs to show your sensors and their alerts. None of 
 |---|---|---|
 | Each sensor's network address, the room name you give it, and its firmware version | To find and show your sensors | App storage on your phone |
 | Each sensor's access key | So only your app can read your sensors | Encrypted storage (Android Keystore or iOS Keychain) |
-| Recent readings, up to 7 days | Charts and trends, even while a sensor is offline | A database on your phone |
+| Recent readings, up to 31 days | Charts and trends, even while a sensor is offline | A database on your phone |
 | Your settings: units, alert thresholds, quiet hours, theme | To remember your choices | App storage on your phone |
 | ntfy or Pushover details, if you set them up | To configure your sensors' notifications | Encrypted storage |
 | Which alerts you've already seen | So the app only shows new ones | App storage on your phone |
 
 The app doesn't store your Wi-Fi password. During setup it encrypts it and passes it straight to your sensor over Bluetooth.
 
-If you share a sensor with another phone using a pair code, the code contains that sensor's network address and access key. Anyone with the code can read that sensor's readings while on your network, so share it only with people you trust.
+If you share a sensor with another phone using a pair code, the code contains that sensor's network address and access key. Anyone with the code can read that sensor's readings and alert settings, including its ntfy topic, while on your network, so share it only with people you trust. The same goes for pasting it into Home Assistant: your Home Assistant then reads the sensor directly on your network, and nothing is sent to us.
 
 ## What your sensors store
 
@@ -41,7 +41,7 @@ Each LumeAir sensor keeps its own settings and readings in its built-in memory. 
 
 - Your Wi-Fi network name and password, so it can reconnect.
 - Its access key, which it requires on every request from the app.
-- Its readings for the last 7 days and a log of its last 64 alerts.
+- Its readings for the last 30 days and a log of its last 64 alerts.
 - Your alert thresholds, quiet hours and time zone.
 - The room name and ntfy or Pushover details, if you set up notifications.
 
@@ -72,7 +72,7 @@ Apart from the firmware update check, these services are involved only when you 
 | Pushover | You turn on notifications through Pushover | The same alert details, plus your Pushover app token and user key. During setup, the app also sends those two codes to Pushover once to check them. |
 | Google Play or Apple's App Store | You install or update the app | What their own policies describe, such as crash reports if you've allowed your phone to share them with developers. |
 
-Anyone who knows your ntfy topic name can read alerts sent to it on a public server. The app makes it long and random so it can't be guessed. Treat it like a password, or use your own ntfy server.
+Anyone who knows your ntfy topic name can read alerts sent to it on a public server. The app makes it long and random so it can't be guessed. Treat it like a password, or use your own ntfy server. Phones that hold a sensor's access key can see its topic, so everyone using the sensor can subscribe to the same alerts.
 
 ## What we don't do
 
@@ -85,9 +85,9 @@ Anyone who knows your ntfy topic name can read alerts sent to it on a public ser
 
 You control all of it, because it lives on your own devices.
 
-- **On your phone:** readings older than 7 days are deleted automatically. Removing a sensor in the app deletes its details and readings. Uninstalling the app deletes everything it stored.
+- **On your phone:** readings older than 31 days are deleted automatically. Removing a sensor in the app deletes its details and readings. Uninstalling the app deletes everything it stored.
 - **Backups:** Android may include the app's settings in your phone's backup to your Google account, as it does for most apps. Access keys are encrypted with a key that never leaves your phone, so a restored backup can't read them.
-- **On your sensors:** readings older than 7 days and alerts beyond the last 64 are dropped automatically. Turning off phone notifications in the app erases the ntfy or Pushover details from your sensors. To erase a sensor completely, factory reset it from the app (**Settings › Sensors**), or hold its BOOT button for 10 seconds.
+- **On your sensors:** readings older than 31 days and alerts beyond the last 64 are dropped automatically. Turning off phone notifications in the app erases the ntfy or Pushover details from your sensors. To erase a sensor completely, factory reset it from the app (**Settings › Sensors**), or hold its BOOT button for 10 seconds.
 - **With third parties:** alerts already sent to ntfy or Pushover are kept as their policies describe.
 
 ## Security
