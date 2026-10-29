@@ -1,10 +1,10 @@
 {
-  "version": "0.4.1",
-  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.4.1.bin",
-  "size": 1903536,
-  "sha256": "955951d9a301f3188155c17dd6a5e35d25a5d2e757703a4bac30e757751ab2c1",
-  "signature": "f3095efabe9418a28b509772ceb18cc49612a10d89390d103df3c1a418fe71f25cc687377d69805cba215bfd64b7278499f8d55e41beaacda6ef992d43e6fa0e",
-  "notes": "Test release",
-  "released": "2026-10-28",
-  "commit": "3bd91b3"
+  "version": "0.5.0",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.5.0.bin",
+  "size": 1903616,
+  "sha256": "89cf06904b6382983fc121e6dde6dd6a5c3c2ffd4d2bd3a181a4d72e06a4e7f9",
+  "signature": "1da0fa9d0db976b74191ed40ee01aeae8ef33662979d760a095afe26083e020efeef2eee6baf78cb482287db79d0c2181e76b4ae0226ac8b45525fa5ecda550a",
+  "notes": "30 days of history",
+  "released": "2026-10-29",
+  "commit": "8a4979a"
 }
