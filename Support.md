@@ -64,6 +64,16 @@ In the app, go to **Settings › What the colors mean**. Particle ratings follow
 - No alerts arrive during **quiet hours**. If a reading is still high when quiet hours end, you get the alert then.
 - After setting up ntfy or Pushover, use the test notification to check that alerts reach your phone.
 
+## Home Assistant
+
+Your sensors can show up in Home Assistant 2026.3 or later, with every reading, an overall air-quality rating, and their alerts. Home Assistant reads each sensor directly on your home network.
+
+1. In the app, go to **Settings › Home Assistant** and tap **Open in Home Assistant**. Download LumeAir from your Home Assistant's Marketplace, then restart Home Assistant.
+2. Home Assistant finds your sensors by itself. In **Settings › Devices & services**, tap **Add** next to each LumeAir sensor.
+3. Paste the sensor's pair code: in the app's **Settings › Home Assistant**, tap **Copy pair code** next to the sensor.
+
+If you set a sensor up again later, Home Assistant asks for its new pair code. Full instructions are on the [LumeAir for Home Assistant](https://github.com/KyleBcine/lumeair-homeassistant#readme) page.
+
 ## Factory reset
 
 A factory reset erases the sensor's Wi-Fi details, access key, alert settings and stored readings. You'll need to set it up again afterwards.
