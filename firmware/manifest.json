@@ -1,0 +1,10 @@
+{
+  "version": "0.4.1",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.4.1.bin",
+  "size": 1903536,
+  "sha256": "955951d9a301f3188155c17dd6a5e35d25a5d2e757703a4bac30e757751ab2c1",
+  "signature": "f3095efabe9418a28b509772ceb18cc49612a10d89390d103df3c1a418fe71f25cc687377d69805cba215bfd64b7278499f8d55e41beaacda6ef992d43e6fa0e",
+  "notes": "Test release",
+  "released": "2026-10-28",
+  "commit": "3bd91b3"
+}
