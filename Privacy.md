@@ -1,6 +1,6 @@
 # LumeAir Home Privacy Policy
 
-**Effective October 28, 2026**
+**Effective October 29, 2026**
 
 ## At a glance
 
@@ -67,7 +67,7 @@ Apart from the firmware update check, these services are involved only when you 
 
 | Service | When it's used | What it receives |
 |---|---|---|
-| GitHub Pages | The app checks for a firmware update when you open Settings, at most every 6 hours. A sensor downloads an update only when you tap **Update**. | Your IP address and the time of each request, as for any website. The requests carry no readings, settings, access keys or account details. GitHub hosts our release files; we don't receive its visitor logs. |
+| GitHub Pages | The app checks for a firmware update when you open it or return to it, at most every 6 hours. A sensor downloads an update only when you tap **Update**. | Your IP address and the time of each request, as for any website. The requests carry no readings, settings, access keys or account details. GitHub hosts our release files; we don't receive its visitor logs. |
 | ntfy | You turn on notifications through ntfy | Each alert your sensors send: its title, the room name, the reading and your threshold, and a link that opens the app. Alerts go to a topic name the app generates at random, sent to ntfy.sh unless you enter your own ntfy server. |
 | Pushover | You turn on notifications through Pushover | The same alert details, plus your Pushover app token and user key. During setup, the app also sends those two codes to Pushover once to check them. |
 | Google Play or Apple's App Store | You install or update the app | What their own policies describe, such as crash reports if you've allowed your phone to share them with developers. |
