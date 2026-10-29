@@ -1,6 +1,6 @@
 # LumeAir Home Privacy Policy
 
-**Effective October 20, 2026**
+**Effective October 28, 2026**
 
 ## At a glance
 
@@ -9,6 +9,7 @@ LumeAir Home doesn't collect your personal information: there are no accounts, n
 - Your air-quality readings travel only between your sensors and your phone, over your Wi-Fi.
 - Your Wi-Fi password goes from your phone to your sensor over Bluetooth during setup, encrypted so nearby devices can't read it. The app doesn't keep it.
 - If you turn on phone notifications, your sensors send alerts through ntfy or Pushover, services you choose and set up yourself.
+- To check for firmware updates, the app reads a small file from our release page on GitHub, and your sensor downloads an update from there when you tap **Update**. Like any website, GitHub sees your IP address; no readings or settings are sent.
 - We never sell, share or rent your information.
 
 ## Who we are and what this covers
@@ -56,16 +57,17 @@ The app asks only for permissions it uses, and only when it needs them.
 | Location (Android 11 and older only) | Setting up a new sensor | Older Android versions require it for any Bluetooth scan. The app never reads your location. |
 | Camera | Scanning a pair code | To read the QR code. The image is processed on your phone and never saved or sent. |
 | Local network and Wi-Fi | While the app is open | To find your sensors and read them over your home network. |
-| Internet | While the app is open | To reach your sensors, and to check Pushover codes if you set up Pushover. |
+| Internet | While the app is open | To reach your sensors, to check for firmware updates, and to check Pushover codes if you set up Pushover. |
 
 The app doesn't ask to send you notifications itself. Alerts come from your sensors through the notification app you choose.
 
 ## Third-party services
 
-These services are involved only when you choose to use them. We don't control them, and their own privacy policies apply.
+Apart from the firmware update check, these services are involved only when you choose to use them. We don't control them, and their own privacy policies apply.
 
 | Service | When it's used | What it receives |
 |---|---|---|
+| GitHub Pages | The app checks for a firmware update when you open Settings, at most every 6 hours. A sensor downloads an update only when you tap **Update**. | Your IP address and the time of each request, as for any website. The requests carry no readings, settings, access keys or account details. GitHub hosts our release files; we don't receive its visitor logs. |
 | ntfy | You turn on notifications through ntfy | Each alert your sensors send: its title, the room name, the reading and your threshold, and a link that opens the app. Alerts go to a topic name the app generates at random, sent to ntfy.sh unless you enter your own ntfy server. |
 | Pushover | You turn on notifications through Pushover | The same alert details, plus your Pushover app token and user key. During setup, the app also sends those two codes to Pushover once to check them. |
 | Google Play or Apple's App Store | You install or update the app | What their own policies describe, such as crash reports if you've allowed your phone to share them with developers. |
@@ -90,7 +92,7 @@ You control all of it, because it lives on your own devices.
 
 ## Security
 
-Each sensor gets its own random access key during setup, and it answers only requests that carry it. The app keeps those keys, and your ntfy or Pushover details, in your phone's encrypted storage. Sensors send notifications to ntfy and Pushover over HTTPS.
+Each sensor gets its own random access key during setup, and it answers only requests that carry it. The app keeps those keys, and your ntfy or Pushover details, in your phone's encrypted storage. Sensors send notifications to ntfy and Pushover over HTTPS. Firmware updates are downloaded over HTTPS and signed: a sensor installs one only if its signature matches LumeAir's key, and otherwise keeps its current firmware.
 
 Inside your home network, the app and sensors talk over plain HTTP, so your network's Wi-Fi password is what keeps others off it. No system is perfectly secure; if you find a security problem, please tell us using the contact below.
 
