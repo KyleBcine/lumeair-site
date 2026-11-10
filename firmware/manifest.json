@@ -1,10 +1,10 @@
 {
-  "version": "0.5.1",
-  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.5.1.bin",
-  "size": 1907216,
-  "sha256": "647185cc822560e7e97d47704ebe3f1e90a1cbac2b21f817764a5306e27923d6",
-  "signature": "86690e19f70426fa7eb47d0b8e64ec1b6fc1fcd5f4a255e416fb4aeb4c177aacc23d9bd900b71b3b9e07c7ead9041b810aa03800c177c346680f9480032d4302",
-  "notes": "30 days of history; alerts shared between phones",
-  "released": "2026-10-29",
-  "commit": "eb50b9a"
+  "version": "0.6.0",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.6.0.bin",
+  "size": 1892288,
+  "sha256": "fdb24fd3c4251cc5dcbd1b12a5ab9c4acda86fa2bf400cd1f21b087ee8bd7660",
+  "signature": "07f2d343fe7236b086d159df0f75d35537ac9157c564b6368b668b30fedf877339a2d8b3d31aaa1e1976aa5d4b9848100ac5f8a611d46b0a00ad5e86f5b72e01",
+  "notes": "SEN66 sensor: VOC learning kept across restarts, weekly fan cleaning",
+  "released": "2026-11-10",
+  "commit": "768946b"
 }

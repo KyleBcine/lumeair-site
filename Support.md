@@ -42,16 +42,18 @@ Each sensor accepts changes only from a phone that holds its access key. To use 
 
 | Reading | First reading after the sensor starts | Then updates |
 |---|---|---|
-| Temperature and humidity | Straight away | Every 30 seconds |
-| CO₂ | About 30 seconds | About every 30 seconds |
-| PM2.5 and PM10 | About 1½ minutes | Every 5 minutes |
-| VOC index | A few minutes | Every second |
+| Temperature and humidity | Straight away | Every second |
+| PM2.5 and PM10 | Within seconds, fully accurate after 30 seconds | Every second |
+| CO₂ | About 6 seconds | Every second |
+| VOC index | About a minute | Every second |
 
-The particle sensor rests between readings to make its fan and laser last longer, which is why PM2.5 and PM10 update every 5 minutes.
+The app shows the latest reading every few seconds, and the history keeps one point a minute.
+
+Once a week, at night, the sensor cleans its fan by running it at full speed for 10 seconds. Readings pause for about 12 seconds while it does.
 
 ### The VOC index seems off
 
-The VOC index compares the air with what's normal for that room, where about **100 is normal**. It learns the room over its first few hours, so readings settle down after that. It starts learning again whenever the sensor restarts.
+The VOC index compares the air with what's normal for that room, where about **100 is normal**. It learns the room over its first few hours, so readings settle down after that. The sensor keeps what it has learned through app updates and restarts, and after a short power cut. It only starts learning again after being unplugged for more than an hour.
 
 ### What do the colors mean?
 
