@@ -1,10 +1,10 @@
 {
-  "version": "0.6.0",
-  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.6.0.bin",
-  "size": 1892288,
-  "sha256": "fdb24fd3c4251cc5dcbd1b12a5ab9c4acda86fa2bf400cd1f21b087ee8bd7660",
-  "signature": "07f2d343fe7236b086d159df0f75d35537ac9157c564b6368b668b30fedf877339a2d8b3d31aaa1e1976aa5d4b9848100ac5f8a611d46b0a00ad5e86f5b72e01",
-  "notes": "SEN66 sensor: VOC learning kept across restarts, weekly fan cleaning",
-  "released": "2026-11-10",
-  "commit": "768946b"
+  "version": "0.7.0",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.7.0.bin",
+  "size": 1907696,
+  "sha256": "8e7b898c22f58dfd6c49c70a5f0493d40be062a1ab5e5b8e13eecd86cdaffc48",
+  "signature": "488a5a54f84f685b0778486c581faa514d23a5574867b2180db51f431ada5a26a4d93fd53f2afa478a31f24fd3391363154f28a5eb3a650dad5e6621ed75800c",
+  "notes": "Security update: the app now signs its requests, so your sensor's access key no longer crosses your network. Also a safer web server and Bluetooth fixes.",
+  "released": "2026-11-22",
+  "commit": "c91795d"
 }
