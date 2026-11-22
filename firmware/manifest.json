@@ -1,10 +1,10 @@
 {
-  "version": "0.7.0",
-  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.7.0.bin",
-  "size": 1907696,
-  "sha256": "8e7b898c22f58dfd6c49c70a5f0493d40be062a1ab5e5b8e13eecd86cdaffc48",
-  "signature": "488a5a54f84f685b0778486c581faa514d23a5574867b2180db51f431ada5a26a4d93fd53f2afa478a31f24fd3391363154f28a5eb3a650dad5e6621ed75800c",
-  "notes": "Security update: the app now signs its requests, so your sensor's access key no longer crosses your network. Also a safer web server and Bluetooth fixes.",
+  "version": "0.7.1",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.7.1.bin",
+  "size": 1908464,
+  "sha256": "e5ddc90f347951f1cdc5ef440f4d2b272286b7b9ada3bd90c181a4a4f84c2a60",
+  "signature": "9eb5c26e64e7afcb8eb1e3c08ac4c961dc72fa44b3dc8fe1ae3bb2c9e37f8b0666610a0caf930f360a9935529dfde53866754db8b2c4847fce7008c34c90ad0e",
+  "notes": "Test release",
   "released": "2026-11-22",
-  "commit": "c91795d"
+  "commit": "5eb4c34"
 }
