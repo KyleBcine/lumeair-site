@@ -1,15 +1,16 @@
 # LumeAir Home Privacy Policy
 
-**Effective October 29, 2026**
+**Effective November 22, 2026**
 
 ## At a glance
 
-LumeAir Home doesn't collect your personal information: there are no accounts, no analytics, no ads, and no LumeAir servers. Everything the app knows stays on your phone and on your own LumeAir sensors, on your home network.
+LumeAir Home doesn't collect your personal information: there are no accounts, no analytics of our own, no ads, and no LumeAir servers. Everything the app knows stays on your phone and on your own LumeAir sensors, on your home network.
 
 - Your air-quality readings travel only between your sensors and your phone, over your Wi-Fi.
 - Your Wi-Fi password goes from your phone to your sensor over Bluetooth during setup, encrypted so nearby devices can't read it. The app doesn't keep it.
 - If you turn on phone notifications, your sensors send alerts through ntfy or Pushover, services you choose and set up yourself.
 - To check for firmware updates, the app reads a small file from our release page on GitHub, and your sensor downloads an update from there when you tap **Update**. Like any website, GitHub sees your IP address; no readings or settings are sent.
+- On Android, the QR code scanner is Google's ML Kit, which sends Google diagnostic data about the scanner (not the image). See [Third-party services](#third-party-services).
 - We never sell, share or rent your information.
 
 ## Who we are and what this covers
@@ -40,12 +41,12 @@ If you share a sensor with another phone using a pair code, the code contains th
 Each LumeAir sensor keeps its own settings and readings in its built-in memory. Nothing on a sensor is sent to us.
 
 - Your Wi-Fi network name and password, so it can reconnect.
-- Its access key, which it requires on every request from the app.
+- Its access key, which it uses to check every request from the app.
 - Its readings for the last 30 days and a log of its last 64 alerts.
 - Your alert thresholds, quiet hours and time zone.
 - The room name and ntfy or Pushover details, if you set up notifications.
 
-On your home network, the app and sensor talk over plain HTTP, and every request must carry the sensor's access key. The sensor accepts Bluetooth setup connections only when it has no Wi-Fi settings, and for 2 minutes after it restarts. Once set up, it accepts new Wi-Fi details only from a phone that holds its access key.
+On your home network, the app and sensor talk over plain HTTP. With sensor firmware 0.7.0 or later, the app signs every request with the sensor's access key instead of sending the key, and encrypts your ntfy or Pushover details when it saves them, so someone watching your network can't copy either. Earlier firmware receives the access key with each request. The sensor accepts Bluetooth setup connections only when it has no Wi-Fi settings, and for 2 minutes after it restarts. Once set up, it accepts new Wi-Fi details only from a phone that holds its access key.
 
 ## Permissions and why we ask
 
@@ -55,7 +56,7 @@ The app asks only for permissions it uses, and only when it needs them.
 |---|---|---|
 | Bluetooth (Nearby devices) | Setting up a new sensor | To find the sensor and give it your Wi-Fi details. We tell Android we don't use it to work out your location. |
 | Location (Android 11 and older only) | Setting up a new sensor | Older Android versions require it for any Bluetooth scan. The app never reads your location. |
-| Camera | Scanning a pair code | To read the QR code. The image is processed on your phone and never saved or sent. |
+| Camera | Scanning a pair code | To read the QR code. The image is processed on your phone and never saved or sent. On Android, the scanner sends Google diagnostic data about itself; see [Third-party services](#third-party-services). |
 | Local network and Wi-Fi | While the app is open | To find your sensors and read them over your home network. |
 | Internet | While the app is open | To reach your sensors, to check for firmware updates, and to check Pushover codes if you set up Pushover. |
 
@@ -70,6 +71,7 @@ Apart from the firmware update check, these services are involved only when you 
 | GitHub Pages | The app checks for a firmware update when you open it or return to it, at most every 6 hours. A sensor downloads an update only when you tap **Update**. | Your IP address and the time of each request, as for any website. The requests carry no readings, settings, access keys or account details. GitHub hosts our release files; we don't receive its visitor logs. |
 | ntfy | You turn on notifications through ntfy | Each alert your sensors send: its title, the room name, the reading and your threshold, and a link that opens the app. Alerts go to a topic name the app generates at random, sent to ntfy.sh unless you enter your own ntfy server. |
 | Pushover | You turn on notifications through Pushover | The same alert details, plus your Pushover app token and user key. During setup, the app also sends those two codes to Pushover once to check them. |
+| Google ML Kit (Android only) | You scan a pair code | Diagnostic data about the scanner: your phone's make, model and Android version, the app's name and version, an identifier for this installation that isn't meant to identify you or your phone, and how the scanner performed, including errors. Google says it sends this encrypted and doesn't pass it to third parties. It never receives the camera image or the code. On iPhone, the app uses Apple's built-in scanner, which sends nothing. |
 | Google Play or Apple's App Store | You install or update the app | What their own policies describe, such as crash reports if you've allowed your phone to share them with developers. |
 
 Anyone who knows your ntfy topic name can read alerts sent to it on a public server. The app makes it long and random so it can't be guessed. Treat it like a password, or use your own ntfy server. Phones that hold a sensor's access key can see its topic, so everyone using the sensor can subscribe to the same alerts.
@@ -77,7 +79,7 @@ Anyone who knows your ntfy topic name can read alerts sent to it on a public ser
 ## What we don't do
 
 - No accounts, sign-in, or email address required.
-- No analytics, advertising, or tracking SDKs, and no advertising ID.
+- No advertising or tracking SDKs, no analytics of our own, and no advertising ID. (On Android, the QR scanner's diagnostics go to Google, as described above.)
 - No LumeAir servers: we never receive your readings, settings or location.
 - No selling, renting or sharing of your information with anyone.
 
@@ -86,15 +88,15 @@ Anyone who knows your ntfy topic name can read alerts sent to it on a public ser
 You control all of it, because it lives on your own devices.
 
 - **On your phone:** readings older than 31 days are deleted automatically. Removing a sensor in the app deletes its details and readings. Uninstalling the app deletes everything it stored.
-- **Backups:** Android may include the app's settings in your phone's backup to your Google account, as it does for most apps. Access keys are encrypted with a key that never leaves your phone, so a restored backup can't read them.
+- **Backups:** on Android, the app is left out of your phone's backups and of transfers to a new phone; on a new phone, add your sensors again with a pair code or set them up again. On iPhone, your phone's backups include the app's settings and readings, as for most apps, and encrypted backups also include its access keys.
 - **On your sensors:** readings older than 31 days and alerts beyond the last 64 are dropped automatically. Turning off phone notifications in the app erases the ntfy or Pushover details from your sensors. To erase a sensor completely, factory reset it from the app (**Settings › Sensors**), or hold its BOOT button for 10 seconds.
 - **With third parties:** alerts already sent to ntfy or Pushover are kept as their policies describe.
 
 ## Security
 
-Each sensor gets its own random access key during setup, and it answers only requests that carry it. The app keeps those keys, and your ntfy or Pushover details, in your phone's encrypted storage. Sensors send notifications to ntfy and Pushover over HTTPS. Firmware updates are downloaded over HTTPS and signed: a sensor installs one only if its signature matches LumeAir's key, and otherwise keeps its current firmware.
+Each sensor gets its own random access key during setup, and it answers only requests signed with it (on firmware before 0.7.0, requests that carry it). The key itself doesn't cross your network. The app keeps those keys, and your ntfy or Pushover details, in your phone's encrypted storage. Sensors send notifications to ntfy and Pushover over HTTPS. Firmware updates are downloaded over HTTPS and signed: a sensor installs one only if its signature matches LumeAir's key, and otherwise keeps its current firmware.
 
-Inside your home network, the app and sensors talk over plain HTTP, so your network's Wi-Fi password is what keeps others off it. No system is perfectly secure; if you find a security problem, please tell us using the contact below.
+Inside your home network, the app and sensors talk over plain HTTP. Someone on your Wi-Fi network could see readings and alert settings, though not access keys or notification details, so your network's Wi-Fi password is what keeps others off it. No system is perfectly secure; if you find a security problem, please tell us using the contact below.
 
 ## Children
 
