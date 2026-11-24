@@ -83,6 +83,10 @@ A factory reset erases the sensor's Wi-Fi details, access key, alert settings an
 - **From the app:** go to **Settings › Sensors**, open the sensor's menu, and choose **Factory reset…**.
 - **On the sensor:** hold its **BOOT** button for **10 seconds**. The light starts blinking after 3 seconds; keep holding. Letting go early erases nothing.
 
+## Building your own sensor
+
+The design files and a step-by-step guide are on [Build your own LumeAir](Build.md). To put the firmware back on a sensor, for example after a failed update, use the **Install firmware** button there.
+
 ## Finding your versions
 
 When you contact us, it helps to include:
