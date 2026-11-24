@@ -1,0 +1,8 @@
+{%- comment -%}
+  Added to every page's <head> by the Primer theme. The Build page's
+  Install firmware button (ESP Web Tools) is loaded here rather than in
+  Build.md, so GitHub's own view of Build.md doesn't show the script as text.
+{%- endcomment -%}
+{%- if page.name == "Build.md" %}
+<script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js?module"></script>
+{%- endif %}
