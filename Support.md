@@ -1,5 +1,7 @@
 # LumeAir Home Support
 
+<p class="gh-only">You're reading the source of this page on GitHub. <a href="https://kylebcine.github.io/lumeair-site/Support"><strong>Open it on the LumeAir website</strong></a>.</p>
+
 Need help with your LumeAir sensor or the LumeAir Home app? Start with the answers below. If they don't solve it, [email us](#contact).
 
 ## Setting up a sensor
