@@ -1,10 +1,10 @@
 {
-  "version": "0.7.1",
-  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.7.1.bin",
-  "size": 1908464,
-  "sha256": "e5ddc90f347951f1cdc5ef440f4d2b272286b7b9ada3bd90c181a4a4f84c2a60",
-  "signature": "9eb5c26e64e7afcb8eb1e3c08ac4c961dc72fa44b3dc8fe1ae3bb2c9e37f8b0666610a0caf930f360a9935529dfde53866754db8b2c4847fce7008c34c90ad0e",
-  "notes": "Security update: the app now checks that a sensor is really yours before re-setting it up over Bluetooth.",
-  "released": "2026-11-22",
-  "commit": "5eb4c34"
+  "version": "0.8.0",
+  "url": "https://kylebcine.github.io/lumeair-site/firmware/lumeair-0.8.0.bin",
+  "size": 1910352,
+  "sha256": "ccf7d5344d03f123588ba28a31e2da410e4d7bf1534d41870e0e8720d7b45030",
+  "signature": "b86729e31b9c4e2a4b730f99d5b6a1d6349dd2a5f57e9efc6d6b1c824dbce736756d452297b5da133349731fadf57412ad49c5bed618b867ef9bccfb3126800c",
+  "notes": "Adds PM4.0, NOx and pressure to the sensor's history, for the new readings in LumeAir 1.4. History saved by earlier firmware is cleared once.",
+  "released": "2026-11-24",
+  "commit": "5da8c42"
 }
