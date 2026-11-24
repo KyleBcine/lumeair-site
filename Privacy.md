@@ -1,5 +1,7 @@
 # LumeAir Home Privacy Policy
 
+<p class="gh-only">You're reading the source of this page on GitHub. <a href="https://kylebcine.github.io/lumeair-site/Privacy"><strong>Open it on the LumeAir website</strong></a>.</p>
+
 **Effective November 22, 2026**
 
 ## At a glance

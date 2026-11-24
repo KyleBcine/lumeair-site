@@ -1,5 +1,7 @@
 # Build your own LumeAir
 
+<p class="gh-only">You're reading the source of this page on GitHub. <a href="https://kylebcine.github.io/lumeair-site/Build"><strong>Open it on the LumeAir website</strong></a> for the working Install firmware button.</p>
+
 A LumeAir is a small circuit board with a Sensirion SEN66 air-quality
 sensor, a Bosch BMP581 barometer and a Seeed Studio XIAO ESP32-S3, in a
 3D-printed case. It measures CO₂, particles (PM1.0 to PM10), VOC and NOx
@@ -10,6 +12,9 @@ This guide takes you from parts to a working sensor. Soldering the board
 yourself takes surface-mount experience (one part is a tiny LGA chip), so
 you can also [buy a ready-made board](#buy-one-ready-made) and only print
 and assemble the case.
+
+Either way, you need to **buy a Sensirion SEN66 separately**. It's the
+air-quality sensor itself, and it isn't included with the board.
 
 All the design files are in the
 [lumeair-hardware](https://github.com/KyleBcine/lumeair-hardware)
@@ -67,7 +72,8 @@ Ready-made boards are coming soon, for **$40**. Email
 [lumeair.home@gmail.com](mailto:lumeair.home@gmail.com?subject=Ready-made%20LumeAir%20board)
 to be told when they're available.
 
-With a ready-made board, you can skip to [step 4](#4-print-the-case).
+The SEN66 isn't included: buy it separately. With a ready-made board, you
+can skip to [step 4](#4-print-the-case).
 
 ### Or order the bare board and solder it
 
