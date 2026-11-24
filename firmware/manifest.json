@@ -4,7 +4,7 @@
   "size": 1908464,
   "sha256": "e5ddc90f347951f1cdc5ef440f4d2b272286b7b9ada3bd90c181a4a4f84c2a60",
   "signature": "9eb5c26e64e7afcb8eb1e3c08ac4c961dc72fa44b3dc8fe1ae3bb2c9e37f8b0666610a0caf930f360a9935529dfde53866754db8b2c4847fce7008c34c90ad0e",
-  "notes": "Test release",
+  "notes": "Security update: the app now checks that a sensor is really yours before re-setting it up over Bluetooth.",
   "released": "2026-11-22",
   "commit": "5eb4c34"
 }
