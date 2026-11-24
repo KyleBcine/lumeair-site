@@ -116,10 +116,8 @@ Plug the XIAO into your computer with a USB-C data cable, then press the
 button. It works in **Chrome or Edge on a computer**: Safari, Firefox and
 phones can't reach USB devices from a web page.
 
-<script type="module" src="https://unpkg.com/esp-web-tools@10.4.0/dist/web/install-button.js?module"></script>
 <esp-web-install-button manifest="firmware/flasher.json">
-  <span slot="unsupported"><strong>This browser can't install firmware.</strong> Open this page in Chrome or Edge on a computer.</span>
-  <span slot="not-allowed"><strong>Installing needs a secure page.</strong> Open this page from https://kylebcine.github.io.</span>
+  <span slot="unsupported"><strong>The Install firmware button needs Chrome or Edge on a computer.</strong> It's on the published guide, <a href="https://kylebcine.github.io/lumeair-site/Build">kylebcine.github.io/lumeair-site/Build</a>.</span>
 </esp-web-install-button>
 
 1. Press **Connect**, pick the XIAO from the list (it shows as a USB serial
