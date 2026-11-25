@@ -76,6 +76,8 @@ Your sensors can show up in Home Assistant 2026.3 or later, with every reading, 
 2. Home Assistant finds your sensors by itself. In **Settings › Devices & services**, tap **Add** next to each LumeAir sensor.
 3. Paste the sensor's pair code: in the app's **Settings › Home Assistant**, tap **Copy pair code** next to the sensor.
 
+Firmware updates also show in Home Assistant, under **Settings › Updates**, and can be installed from there (integration 0.4.0 or later).
+
 If you set a sensor up again later, Home Assistant asks for its new pair code. Full instructions are on the [LumeAir for Home Assistant](https://github.com/KyleBcine/lumeair-homeassistant#readme) page.
 
 ## Factory reset
