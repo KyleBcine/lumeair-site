@@ -1,0 +1,5 @@
+# GitHub Pages settings for the LumeAir website.
+# The theme and plugins are GitHub Pages' defaults; the layout is _layouts/default.html.
+title: LumeAir
+description: Air-quality monitoring for your home.
+lang: en-US

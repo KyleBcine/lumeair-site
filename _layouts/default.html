@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+{% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/lumeair.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+    {% include head-custom.html %}
+  </head>
+  {%- assign page_slug = page.name | split: '.' | first | downcase %}
+  <body class="page-{{ page_slug }}">
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="LumeAir home">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__name">LumeAir</span>
+        </a>
+        <nav class="site-nav" aria-label="Site">
+          <a href="{{ '/Build' | relative_url }}"{% if page_slug == 'build' %} aria-current="page"{% endif %}>Build</a>
+          <a href="{{ '/Support' | relative_url }}"{% if page_slug == 'support' %} aria-current="page"{% endif %}>Support</a>
+          <a href="{{ '/Privacy' | relative_url }}"{% if page_slug == 'privacy' %} aria-current="page"{% endif %}>Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="content" class="wrap content">
+{{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <p class="site-footer__links">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/Build' | relative_url }}">Build your own</a>
+          <a href="{{ '/Support' | relative_url }}">Support</a>
+          <a href="{{ '/Privacy' | relative_url }}">Privacy policy</a>
+          <a href="mailto:lumeair.home@gmail.com">lumeair.home@gmail.com</a>
+        </p>
+        <p class="site-footer__meta">LumeAir Home is made by Kyle Bourgoin. <a href="https://github.com/KyleBcine/lumeair-site">Source on GitHub</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
