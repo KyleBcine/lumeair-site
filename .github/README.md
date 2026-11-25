@@ -26,13 +26,6 @@ The source of the LumeAir website, published with GitHub Pages.
 | `_config.yml` | The site's name and description, used in browser tabs and link previews |
 | `firmware/` | The sensor firmware releases that the LumeAir Home app and the build guide install from |
 
-## Editing the site
-
-1. Edit a page's Markdown file.
-2. Commit it to `main`. GitHub Pages rebuilds the website within a few minutes.
-
-Each page starts with a short "You're reading the source of this page on GitHub" note. It only shows on GitHub, and links readers to the same page on the website, so keep it when you add a page.
-
 ## Related
 
 - [LumeAir hardware](https://github.com/KyleBcine/lumeair-hardware): the board, parts list and case design files
